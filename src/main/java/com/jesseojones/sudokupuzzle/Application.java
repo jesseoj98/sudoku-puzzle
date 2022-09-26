@@ -3,10 +3,10 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.jesseojones.sudokupuzzle.domain.Coordinate;
-import com.jesseojones.sudokupuzzle.util.PuzzleGenerator;
-import com.jesseojones.sudokupuzzle.util.PuzzleHelper;
-import com.jesseojones.sudokupuzzle.util.PuzzlePrinter;
-import com.jesseojones.sudokupuzzle.util.PuzzleValidator;
+import com.jesseojones.sudokupuzzle.util.Generator;
+import com.jesseojones.sudokupuzzle.util.Helper;
+import com.jesseojones.sudokupuzzle.util.Printer;
+import com.jesseojones.sudokupuzzle.util.Validator;
 
 /**
  * The main application class
@@ -16,11 +16,11 @@ import com.jesseojones.sudokupuzzle.util.PuzzleValidator;
  */
 public class Application {
 
-	private static PuzzleGenerator generator = new PuzzleGenerator();
-	private static PuzzleHelper helper = new PuzzleHelper();
-	private static PuzzlePrinter printer = new PuzzlePrinter();
+	private static Generator generator = new Generator();
+	private static Helper helper = new Helper();
+	private static Printer printer = new Printer();
 	private static Scanner scanner = new Scanner(System.in);
-	private static PuzzleValidator validator = new PuzzleValidator();
+	private static Validator validator = new Validator();
 
 	public static void main(String[] args) {
 

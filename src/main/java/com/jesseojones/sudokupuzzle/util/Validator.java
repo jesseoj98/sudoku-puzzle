@@ -13,12 +13,12 @@ import com.jesseojones.sudokupuzzle.domain.diagonals.ForwardsDiagonal;
  * @author Jesse
  * 
  */
-public class PuzzleValidator {
+public class Validator {
 
 	private static final int MAX_PUZZLE_DIMENSION = 9;
 
-	private static PuzzleHelper helper = new PuzzleHelper();
-	private static PuzzleGenerator generator = new PuzzleGenerator();
+	private static Helper helper = new Helper();
+	private static Generator generator = new Generator();
 
 	/**
 	 * Validates a row of the puzzle for a given row number

@@ -15,7 +15,7 @@ import com.jesseojones.sudokupuzzle.domain.quadrants.internal.InternalQuadrant;
  * @author Jesse
  * 
  */
-public class PuzzleHelper {
+public class Helper {
 
 	private static final int MAX_PUZZLE_DIMENSION = 9;
 

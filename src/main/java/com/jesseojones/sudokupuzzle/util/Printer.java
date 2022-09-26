@@ -6,7 +6,7 @@ package com.jesseojones.sudokupuzzle.util;
  * @author Jesse
  *
  */
-public class PuzzlePrinter {
+public class Printer {
 
 	private static final int MAX_PUZZLE_DIMENSION = 9;
 

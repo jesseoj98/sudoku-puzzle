@@ -8,7 +8,7 @@ import java.util.Random;
  * @author Jesse
  *
  */
-public class PuzzleGenerator {
+public class Generator {
 
 	private static final int COIN_FLIP = 2;
 
@@ -18,8 +18,8 @@ public class PuzzleGenerator {
 
 	private static final int PUZZLE_INDICES = 81;
 
-	private static PuzzleHelper helper = new PuzzleHelper();
-	private static PuzzleValidator validator = new PuzzleValidator();
+	private static Helper helper = new Helper();
+	private static Validator validator = new Validator();
 
 	public int[][] generatePuzzle(int difficulty, int complexity) {
 		final int[][] puzzle = new int[MAX_PUZZLE_DIMENSION][MAX_PUZZLE_DIMENSION];
