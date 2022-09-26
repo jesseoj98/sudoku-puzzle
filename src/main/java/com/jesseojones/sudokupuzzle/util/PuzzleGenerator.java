@@ -1,4 +1,4 @@
-package util;
+package com.jesseojones.sudokupuzzle.util;
 
 import java.util.Random;
 

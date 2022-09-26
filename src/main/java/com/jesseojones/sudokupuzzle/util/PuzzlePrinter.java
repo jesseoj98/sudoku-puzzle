@@ -1,4 +1,4 @@
-package util;
+package com.jesseojones.sudokupuzzle.util;
 
 /**
  * A printer class that prints puzzles.

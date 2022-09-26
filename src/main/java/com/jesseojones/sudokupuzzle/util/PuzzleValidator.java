@@ -1,11 +1,11 @@
-package util;
+package com.jesseojones.sudokupuzzle.util;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import domain.Coordinate;
-import domain.diagonals.BackwardsDiagonal;
-import domain.diagonals.ForwardsDiagonal;
+import com.jesseojones.sudokupuzzle.domain.Coordinate;
+import com.jesseojones.sudokupuzzle.domain.diagonals.BackwardsDiagonal;
+import com.jesseojones.sudokupuzzle.domain.diagonals.ForwardsDiagonal;
 
 /**
  * A validation class that performs puzzle validation.

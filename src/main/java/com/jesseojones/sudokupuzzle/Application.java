@@ -1,11 +1,12 @@
+package com.jesseojones.sudokupuzzle;
 import java.util.List;
 import java.util.Scanner;
 
-import domain.Coordinate;
-import util.PuzzleGenerator;
-import util.PuzzlePrinter;
-import util.PuzzleHelper;
-import util.PuzzleValidator;
+import com.jesseojones.sudokupuzzle.domain.Coordinate;
+import com.jesseojones.sudokupuzzle.util.PuzzleGenerator;
+import com.jesseojones.sudokupuzzle.util.PuzzleHelper;
+import com.jesseojones.sudokupuzzle.util.PuzzlePrinter;
+import com.jesseojones.sudokupuzzle.util.PuzzleValidator;
 
 /**
  * The main application class

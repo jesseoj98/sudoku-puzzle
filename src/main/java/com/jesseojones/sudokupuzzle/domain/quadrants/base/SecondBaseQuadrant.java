@@ -1,4 +1,4 @@
-package domain.quadrants.base;
+package com.jesseojones.sudokupuzzle.domain.quadrants.base;
 
 public enum SecondBaseQuadrant {
 

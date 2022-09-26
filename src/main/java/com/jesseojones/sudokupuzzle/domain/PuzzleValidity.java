@@ -1,4 +1,4 @@
-package domain;
+package com.jesseojones.sudokupuzzle.domain;
 
 public class PuzzleValidity {
 

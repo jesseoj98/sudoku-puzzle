@@ -1,4 +1,4 @@
-package domain.diagonals;
+package com.jesseojones.sudokupuzzle.domain.diagonals;
 
 /**
  * \

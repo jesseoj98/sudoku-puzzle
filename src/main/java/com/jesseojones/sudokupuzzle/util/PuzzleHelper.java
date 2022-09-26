@@ -1,13 +1,13 @@
-package util;
+package com.jesseojones.sudokupuzzle.util;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import domain.Coordinate;
-import domain.diagonals.BackwardsDiagonal;
-import domain.diagonals.ForwardsDiagonal;
-import domain.quadrants.base.BaseQuadrant;
-import domain.quadrants.internal.InternalQuadrant;
+import com.jesseojones.sudokupuzzle.domain.Coordinate;
+import com.jesseojones.sudokupuzzle.domain.diagonals.BackwardsDiagonal;
+import com.jesseojones.sudokupuzzle.domain.diagonals.ForwardsDiagonal;
+import com.jesseojones.sudokupuzzle.domain.quadrants.base.BaseQuadrant;
+import com.jesseojones.sudokupuzzle.domain.quadrants.internal.InternalQuadrant;
 
 /**
  * A helper class that performs puzzle operations.

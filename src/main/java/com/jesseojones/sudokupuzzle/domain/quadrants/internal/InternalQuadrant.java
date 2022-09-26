@@ -1,9 +1,9 @@
-package domain.quadrants.internal;
+package com.jesseojones.sudokupuzzle.domain.quadrants.internal;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import domain.Coordinate;
+import com.jesseojones.sudokupuzzle.domain.Coordinate;
 
 public class InternalQuadrant {
 

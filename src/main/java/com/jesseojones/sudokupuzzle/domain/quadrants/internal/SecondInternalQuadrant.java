@@ -1,4 +1,4 @@
-package domain.quadrants.internal;
+package com.jesseojones.sudokupuzzle.domain.quadrants.internal;
 
 public enum SecondInternalQuadrant {
 

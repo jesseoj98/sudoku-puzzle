@@ -1,9 +1,9 @@
-package domain.quadrants.base;
+package com.jesseojones.sudokupuzzle.domain.quadrants.base;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import domain.Coordinate;
+import com.jesseojones.sudokupuzzle.domain.Coordinate;
 
 public class BaseQuadrant {
 
