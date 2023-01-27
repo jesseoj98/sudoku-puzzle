@@ -36,78 +36,6 @@ public class Validator {
 		return validate(row);
 	}
 
-	protected boolean validateFirstRow(int[][] puzzle) {
-		final List<Integer> middleRow = new ArrayList<>();
-		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
-			middleRow.add(puzzle[0][i]);
-		}
-		return validate(middleRow);
-	}
-
-	protected boolean validateSecondRow(int[][] puzzle) {
-		final List<Integer> middleRow = new ArrayList<>();
-		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
-			middleRow.add(puzzle[1][i]);
-		}
-		return validate(middleRow);
-	}
-
-	protected boolean validateThirdRow(int[][] puzzle) {
-		final List<Integer> middleRow = new ArrayList<>();
-		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
-			middleRow.add(puzzle[2][i]);
-		}
-		return validate(middleRow);
-	}
-
-	protected boolean validateFourthRow(int[][] puzzle) {
-		final List<Integer> middleRow = new ArrayList<>();
-		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
-			middleRow.add(puzzle[3][i]);
-		}
-		return validate(middleRow);
-	}
-
-	protected boolean validateFifthRow(int[][] puzzle) {
-		final List<Integer> middleRow = new ArrayList<>();
-		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
-			middleRow.add(puzzle[4][i]);
-		}
-		return validate(middleRow);
-	}
-
-	protected boolean validateSixthRow(int[][] puzzle) {
-		final List<Integer> middleRow = new ArrayList<>();
-		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
-			middleRow.add(puzzle[5][i]);
-		}
-		return validate(middleRow);
-	}
-
-	protected boolean validateSeventhRow(int[][] puzzle) {
-		final List<Integer> middleRow = new ArrayList<>();
-		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
-			middleRow.add(puzzle[6][i]);
-		}
-		return validate(middleRow);
-	}
-
-	protected boolean validateEighthRow(int[][] puzzle) {
-		final List<Integer> middleRow = new ArrayList<>();
-		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
-			middleRow.add(puzzle[7][i]);
-		}
-		return validate(middleRow);
-	}
-
-	protected boolean validateNinthRow(int[][] puzzle) {
-		final List<Integer> middleRow = new ArrayList<>();
-		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
-			middleRow.add(puzzle[8][i]);
-		}
-		return validate(middleRow);
-	}
-
 	/**
 	 * Validates a column of the puzzle for a given column number
 	 * 
@@ -123,14 +51,6 @@ public class Validator {
 			}
 		}
 		return validate(column);
-	}
-
-	protected boolean validateMiddleColumn(int[][] puzzle) {
-		final List<Integer> middleColumn = new ArrayList<>();
-		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
-			middleColumn.add(puzzle[i][4]);
-		}
-		return validate(middleColumn);
 	}
 
 	public boolean validateBaseQuadrant(int[][] puzzle, int xCoordinate, int yCoordinate) {
