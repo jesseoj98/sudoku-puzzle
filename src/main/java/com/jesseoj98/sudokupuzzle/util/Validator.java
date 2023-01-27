@@ -27,7 +27,7 @@ public class Validator {
 	 * @return
 	 */
 	public boolean validateRow(int[][] puzzle, int rowNumber) {
-		final ArrayList<Integer> row = new ArrayList<>();
+		final List<Integer> row = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			if (!helper.isEmptyOrRemoved(puzzle, rowNumber, i)) {
 				row.add(puzzle[rowNumber][i]);
@@ -37,7 +37,7 @@ public class Validator {
 	}
 
 	protected boolean validateFirstRow(int[][] puzzle) {
-		final ArrayList<Integer> middleRow = new ArrayList<>();
+		final List<Integer> middleRow = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			middleRow.add(puzzle[0][i]);
 		}
@@ -45,7 +45,7 @@ public class Validator {
 	}
 
 	protected boolean validateSecondRow(int[][] puzzle) {
-		final ArrayList<Integer> middleRow = new ArrayList<>();
+		final List<Integer> middleRow = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			middleRow.add(puzzle[1][i]);
 		}
@@ -53,7 +53,7 @@ public class Validator {
 	}
 
 	protected boolean validateThirdRow(int[][] puzzle) {
-		final ArrayList<Integer> middleRow = new ArrayList<>();
+		final List<Integer> middleRow = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			middleRow.add(puzzle[2][i]);
 		}
@@ -61,7 +61,7 @@ public class Validator {
 	}
 
 	protected boolean validateFourthRow(int[][] puzzle) {
-		final ArrayList<Integer> middleRow = new ArrayList<>();
+		final List<Integer> middleRow = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			middleRow.add(puzzle[3][i]);
 		}
@@ -69,7 +69,7 @@ public class Validator {
 	}
 
 	protected boolean validateFifthRow(int[][] puzzle) {
-		final ArrayList<Integer> middleRow = new ArrayList<>();
+		final List<Integer> middleRow = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			middleRow.add(puzzle[4][i]);
 		}
@@ -77,7 +77,7 @@ public class Validator {
 	}
 
 	protected boolean validateSixthRow(int[][] puzzle) {
-		final ArrayList<Integer> middleRow = new ArrayList<>();
+		final List<Integer> middleRow = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			middleRow.add(puzzle[5][i]);
 		}
@@ -85,7 +85,7 @@ public class Validator {
 	}
 
 	protected boolean validateSeventhRow(int[][] puzzle) {
-		final ArrayList<Integer> middleRow = new ArrayList<>();
+		final List<Integer> middleRow = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			middleRow.add(puzzle[6][i]);
 		}
@@ -93,7 +93,7 @@ public class Validator {
 	}
 
 	protected boolean validateEighthRow(int[][] puzzle) {
-		final ArrayList<Integer> middleRow = new ArrayList<>();
+		final List<Integer> middleRow = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			middleRow.add(puzzle[7][i]);
 		}
@@ -101,7 +101,7 @@ public class Validator {
 	}
 
 	protected boolean validateNinthRow(int[][] puzzle) {
-		final ArrayList<Integer> middleRow = new ArrayList<>();
+		final List<Integer> middleRow = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			middleRow.add(puzzle[8][i]);
 		}
@@ -116,7 +116,7 @@ public class Validator {
 	 * @return
 	 */
 	public boolean validateColumn(int[][] puzzle, int columnNumber) {
-		final ArrayList<Integer> column = new ArrayList<>();
+		final List<Integer> column = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			if (!helper.isEmptyOrRemoved(puzzle, i, columnNumber)) {
 				column.add(puzzle[i][columnNumber]);
@@ -126,7 +126,7 @@ public class Validator {
 	}
 
 	protected boolean validateMiddleColumn(int[][] puzzle) {
-		final ArrayList<Integer> middleColumn = new ArrayList<>();
+		final List<Integer> middleColumn = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			middleColumn.add(puzzle[i][4]);
 		}
@@ -157,7 +157,7 @@ public class Validator {
 	}
 
 	private boolean validateQuadrant(int[][] puzzle, List<Coordinate> quadrantCoordinates) {
-		final ArrayList<Integer> quadrant = new ArrayList<>();
+		final List<Integer> quadrant = new ArrayList<>();
 		for (int i = 0; i < quadrantCoordinates.size(); i++) {
 			quadrant.add(
 					puzzle[quadrantCoordinates.get(i).getxCoordinate()][quadrantCoordinates.get(i).getyCoordinate()]);
@@ -200,7 +200,7 @@ public class Validator {
 	}
 
 	protected boolean validateBackwardDiagonalSimplest(int[][] puzzle) {
-		final ArrayList<Integer> backwardDiagonal = new ArrayList<>();
+		final List<Integer> backwardDiagonal = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			backwardDiagonal.add(puzzle[i][i]);
 		}
@@ -214,7 +214,7 @@ public class Validator {
 	 * @return
 	 */
 	public boolean validateBackwardDiagonal(int[][] puzzle) {
-		final ArrayList<Integer> backwardDiagonal = new ArrayList<>();
+		final List<Integer> backwardDiagonal = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			for (int j = 0; j < GameBoard.MAX_PUZZLE_DIMENSION; j++) {
 				if (i == j && !helper.isEmptyOrRemoved(puzzle, i, j)) {
@@ -265,7 +265,7 @@ public class Validator {
 	 * @return
 	 */
 	public boolean validateForwardDiagonal(int[][] puzzle) {
-		final ArrayList<Integer> forwardDiagonal = new ArrayList<>();
+		final List<Integer> forwardDiagonal = new ArrayList<>();
 		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			for (int j = GameBoard.MAX_PUZZLE_DIMENSION; j > 0; j--) {
 				if (i + j == GameBoard.MAX_PUZZLE_DIMENSION - 1 && !helper.isEmptyOrRemoved(puzzle, i, j)) {
@@ -282,7 +282,7 @@ public class Validator {
 	 * @param values the ArrayList to validate
 	 * @return whether there are multiple occurences of a value
 	 */
-	private boolean validate(ArrayList<Integer> values) {
+	private boolean validate(List<Integer> values) {
 		for (int i = 0; i < values.size(); i++) {
 			for (int j = i + 1; j < values.size(); j++) {
 				if (values.get(i).equals(values.get(j))) {
