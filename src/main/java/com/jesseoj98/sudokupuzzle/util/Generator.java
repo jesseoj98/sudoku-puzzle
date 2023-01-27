@@ -2,6 +2,8 @@ package com.jesseoj98.sudokupuzzle.util;
 
 import java.util.Random;
 
+import com.jesseoj98.sudokupuzzle.domain.GameBoard;
+
 /**
  * A generator class that generates puzzles.
  * 
@@ -10,19 +12,11 @@ import java.util.Random;
  */
 public class Generator {
 
-	private static final int COIN_FLIP = 2;
-
-	private static final int MAXIMUM_VALUE = 10;
-
-	private static final int MAX_PUZZLE_DIMENSION = 9;
-
-	private static final int PUZZLE_INDICES = 81;
-
 	private static Helper helper = new Helper();
 	private static Validator validator = new Validator();
 
 	public int[][] generatePuzzle(int difficulty, int complexity) {
-		final int[][] puzzle = new int[MAX_PUZZLE_DIMENSION][MAX_PUZZLE_DIMENSION];
+		final int[][] puzzle = new int[GameBoard.MAX_PUZZLE_DIMENSION][GameBoard.MAX_PUZZLE_DIMENSION];
 		return generatePuzzle(puzzle, difficulty, complexity);
 	}
 
@@ -34,8 +28,8 @@ public class Generator {
 	}
 
 	private void insertValuesIntoPuzzle(int[][] puzzle, int complexity) {
-		for (int i = 0; i < MAX_PUZZLE_DIMENSION; i++) {
-			for (int j = 0; j < MAX_PUZZLE_DIMENSION; j++) {
+		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
+			for (int j = 0; j < GameBoard.MAX_PUZZLE_DIMENSION; j++) {
 				if (insertIntoPuzzle(complexity)) {
 					helper.insertIntoPuzzle(puzzle, i, j, generateRandomValue());
 				}
@@ -44,8 +38,8 @@ public class Generator {
 	}
 
 	public int[][] removeAllValuesFromPuzzle(int[][] puzzle) {
-		for (int i = 0; i < MAX_PUZZLE_DIMENSION; i++) {
-			for (int j = 0; j < MAX_PUZZLE_DIMENSION; j++) {
+		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
+			for (int j = 0; j < GameBoard.MAX_PUZZLE_DIMENSION; j++) {
 				helper.removeFromPuzzle(puzzle, i, j);
 			}
 		}
@@ -70,7 +64,7 @@ public class Generator {
 	 */
 	private int generateRandomValue() {
 		Random random = new Random();
-		int value = random.nextInt(MAXIMUM_VALUE);
+		int value = random.nextInt(GameBoard.MAXIMUM_VALUE);
 		if (value == 0) {
 			value++;
 		}

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.jesseoj98.sudokupuzzle.domain.Coordinate;
+import com.jesseoj98.sudokupuzzle.domain.GameBoard;
 import com.jesseoj98.sudokupuzzle.domain.diagonals.BackwardsDiagonal;
 import com.jesseoj98.sudokupuzzle.domain.diagonals.ForwardsDiagonal;
 import com.jesseoj98.sudokupuzzle.domain.quadrants.base.BaseQuadrant;
@@ -16,8 +17,6 @@ import com.jesseoj98.sudokupuzzle.domain.quadrants.internal.InternalQuadrant;
  * 
  */
 public class Helper {
-
-	private static final int MAX_PUZZLE_DIMENSION = 9;
 
 	private static BaseQuadrant baseQuadrant = new BaseQuadrant();
 	private static InternalQuadrant internalQuadrant = new InternalQuadrant();
@@ -139,7 +138,7 @@ public class Helper {
 
 	public List<Integer> retrievePuzzleRowValues(int[][] puzzle, int rowNumber) {
 		final ArrayList<Integer> rowValues = new ArrayList<>();
-		for (int i = 0; i < MAX_PUZZLE_DIMENSION; i++) {
+		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			rowValues.add(puzzle[rowNumber][i]);
 		}
 		return rowValues;
@@ -147,7 +146,7 @@ public class Helper {
 
 	public List<Integer> retrievePuzzleColumnValues(int[][] puzzle, int columnNumber) {
 		final ArrayList<Integer> columnValues = new ArrayList<>();
-		for (int i = 0; i < MAX_PUZZLE_DIMENSION; i++) {
+		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			columnValues.add(puzzle[i][columnNumber]);
 		}
 		return columnValues;
@@ -155,7 +154,7 @@ public class Helper {
 
 	public int retrieveProblemRowIndex(int[][] puzzle, int insertValue, int xCoordinate) {
 		int problemIndex = 0;
-		for (int i = 0; i < MAX_PUZZLE_DIMENSION; i++) {
+		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			// to-do: ignore empty values
 			if (puzzle[xCoordinate][i] == insertValue) {
 				problemIndex = i;
@@ -167,7 +166,7 @@ public class Helper {
 
 	public int retrieveProblemColumnIndex(int[][] puzzle, int insertValue, int yCoordinate) {
 		int problemIndex = 0;
-		for (int i = 0; i < MAX_PUZZLE_DIMENSION; i++) {
+		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			// to-do: ignore empty values
 			if (puzzle[i][yCoordinate] == insertValue) {
 				problemIndex = i;

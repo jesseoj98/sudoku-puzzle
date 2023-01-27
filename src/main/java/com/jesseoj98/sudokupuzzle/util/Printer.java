@@ -1,5 +1,7 @@
 package com.jesseoj98.sudokupuzzle.util;
 
+import com.jesseoj98.sudokupuzzle.domain.GameBoard;
+
 /**
  * A printer class that prints puzzles.
  * 
@@ -8,11 +10,9 @@ package com.jesseoj98.sudokupuzzle.util;
  */
 public class Printer {
 
-	private static final int MAX_PUZZLE_DIMENSION = 9;
-
 	public void printPuzzle(int[][] puzzle) {
 		printTopOfPuzzle();
-		for (int i = 0; i < MAX_PUZZLE_DIMENSION; i++) {
+		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			printPuzzleRow(puzzle, i);
 			if (i != 8) {
 				printPuzzleDivider();
@@ -23,7 +23,7 @@ public class Printer {
 
 	private void printPuzzleRow(int[][] puzzle, int xCoordinate) {
 		System.out.print((xCoordinate + 1) + " |");
-		for (int i = 0; i < MAX_PUZZLE_DIMENSION; i++) {
+		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			if (endOfIndexMatch(i)) {
 				System.out.print(" " + printEmptyIfEmptyOrInvalid(Integer.toString(puzzle[xCoordinate][i])) + " |");
 			} else {
@@ -49,7 +49,7 @@ public class Printer {
 
 	public String printPuzzleRowValues(int[][] puzzle, int rowNumber) {
 		StringBuilder rowValues = new StringBuilder();
-		for (int i = 0; i < MAX_PUZZLE_DIMENSION; i++) {
+		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			if (endOfIndexMatch(i)) {
 				rowValues.append("[" + (rowNumber + 1) + ", " + i + 1 + "] contains "
 						+ printNothingIfEmptyOrInvalid(Integer.toString(puzzle[rowNumber][i])) + "\n");
@@ -63,7 +63,7 @@ public class Printer {
 
 	public String printPuzzleColumnValues(int[][] puzzle, int columnNumber) {
 		StringBuilder columnValues = new StringBuilder();
-		for (int i = 0; i < MAX_PUZZLE_DIMENSION; i++) {
+		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
 			if (endOfIndexMatch(i)) {
 				columnValues.append("[" + (columnNumber + 1) + ", " + i + 1 + "] contains "
 						+ printNothingIfEmptyOrInvalid(Integer.toString(puzzle[i][columnNumber])) + "\n");
@@ -77,8 +77,8 @@ public class Printer {
 
 	public String printPuzzleBackwardDiagonalValues(int[][] puzzle) {
 		StringBuilder backwardDiagonalValues = new StringBuilder();
-		for (int i = 0; i < MAX_PUZZLE_DIMENSION; i++) {
-			for (int j = 0; j < MAX_PUZZLE_DIMENSION; j++) {
+		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
+			for (int j = 0; j < GameBoard.MAX_PUZZLE_DIMENSION; j++) {
 				if (i == j) {
 					if (endOfIndexMatch(i) && endOfIndexMatch(j)) {
 						backwardDiagonalValues.append("[" + (i + 1) + ", " + (j + 1) + "] contains "
@@ -95,9 +95,9 @@ public class Printer {
 
 	public String printPuzzleForwardDiagonalValues(int[][] puzzle) {
 		StringBuilder forwardDiagonalValues = new StringBuilder();
-		for (int i = 0; i < MAX_PUZZLE_DIMENSION; i++) {
-			for (int j = MAX_PUZZLE_DIMENSION; j > 0; j--) {
-				if (i + j == MAX_PUZZLE_DIMENSION) {
+		for (int i = 0; i < GameBoard.MAX_PUZZLE_DIMENSION; i++) {
+			for (int j = GameBoard.MAX_PUZZLE_DIMENSION; j > 0; j--) {
+				if (i + j == GameBoard.MAX_PUZZLE_DIMENSION) {
 					if (endOfIndexMatch(i) && endOfIndexMatch(j)) {
 						forwardDiagonalValues.append("[" + (i + 1) + ", " + (j + 1) + "] contains "
 								+ printNothingIfEmptyOrInvalid(Integer.toString(puzzle[i][j])) + "\n");
@@ -112,7 +112,7 @@ public class Printer {
 	}
 
 	private boolean endOfIndexMatch(int index) {
-		return index != MAX_PUZZLE_DIMENSION - 1;
+		return index != GameBoard.MAX_PUZZLE_DIMENSION - 1;
 	}
 
 	private String printEmptyIfEmptyOrInvalid(String puzzleValue) {
