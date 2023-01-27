@@ -58,10 +58,6 @@ public class Helper {
 		return validatePuzzleValue(puzzle[xCoordinate][yCoordinate]);
 	}
 
-	public boolean valueIsEmptyOrRemoved(int[][] puzzle, int xCoordinate, int yCoordinate) {
-		return puzzle[xCoordinate][yCoordinate] == 0 || puzzle[xCoordinate][yCoordinate] == -1;
-	}
-
 	public List<Coordinate> getBaseQuadrantCoordinates(int xCoordinate, int yCoordinate) {
 
 		List<Coordinate> firstBaseQuadrantCoordinates = baseQuadrant.getFirstBaseQuadrantCoordinates();
