@@ -55,11 +55,7 @@ public class Helper {
 	}
 
 	public boolean valueAlreadyExists(int[][] puzzle, int xCoordinate, int yCoordinate) {
-		return puzzle[xCoordinate][yCoordinate] == 1 || puzzle[xCoordinate][yCoordinate] == 2
-				|| puzzle[xCoordinate][yCoordinate] == 3 || puzzle[xCoordinate][yCoordinate] == 4
-				|| puzzle[xCoordinate][yCoordinate] == 5 || puzzle[xCoordinate][yCoordinate] == 6
-				|| puzzle[xCoordinate][yCoordinate] == 7 || puzzle[xCoordinate][yCoordinate] == 8
-				|| puzzle[xCoordinate][yCoordinate] == 9;
+		return validatePuzzleValue(puzzle[xCoordinate][yCoordinate]);
 	}
 
 	public boolean valueIsEmptyOrRemoved(int[][] puzzle, int xCoordinate, int yCoordinate) {
