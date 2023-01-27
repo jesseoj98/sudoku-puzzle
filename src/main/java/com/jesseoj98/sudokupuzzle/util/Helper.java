@@ -105,7 +105,7 @@ public class Helper {
 	}
 
 	public List<Coordinate> getInternalQuadrantCoordinates(int xCoordinate, int yCoordinate) {
-
+		// to-do: account for coordinates that don't fall in the internal quadrants
 		List<Coordinate> firstInternalQuadrantCoordinates = internalQuadrant.getFirstInternalQuadrantCoordinates();
 		List<Coordinate> secondInternalQuadrantCoordinates = internalQuadrant.getSecondInternalQuadrantCoordinates();
 		List<Coordinate> thirdInternalQuadrantCoordinates = internalQuadrant.getThirdInternalQuadrantCoordinates();
