@@ -6,4 +6,7 @@ public class GameBoard {
 
 	public static final int MAXIMUM_VALUE = 10;
 
+	private GameBoard() {
+	}
+
 }
