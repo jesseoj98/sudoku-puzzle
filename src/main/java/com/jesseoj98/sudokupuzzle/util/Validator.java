@@ -227,16 +227,20 @@ public class Validator {
 		switch (difficulty) {
 		case 1:
 			result = validateAllRows(puzzle) && validateAllColumns(puzzle);
+			break;
 		case 2:
 			// to-do: validate all nine 3x3 quadrants
 			result = validateAllRows(puzzle) && validateAllColumns(puzzle);
+			break;
 		case 3:
 			// to-do: validate four internal 3x3 quadrants
 			result = validateAllRows(puzzle) && validateAllColumns(puzzle);
+			break;
 		case 4:
 			// to-do: validate all
 			result = validateAllRows(puzzle) && validateAllColumns(puzzle) && validateBackwardDiagonal(puzzle)
 					&& validateForwardDiagonal(puzzle);
+			break;
 		default:
 			result = false;
 		}
@@ -268,14 +272,12 @@ public class Validator {
 		return result;
 	}
 
-	public boolean validateAllBaseQuadrants(int[][] puzzle) {
-		boolean result = true;
-		return result;
+	public boolean validateAllBaseQuadrants() {
+		return true;
 	}
 
-	public boolean validateAllInternalQuadrants(int[][] puzzle) {
-		boolean result = true;
-		return result;
+	public boolean validateAllInternalQuadrants() {
+		return true;
 	}
 
 }
