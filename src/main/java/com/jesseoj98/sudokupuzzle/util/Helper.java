@@ -42,7 +42,7 @@ public class Helper {
 	}
 
 	public void removeFromPuzzle(int[][] puzzle, int xCoordinate, int yCoordinate) {
-		puzzle[xCoordinate][yCoordinate] = -1;
+		puzzle[xCoordinate][yCoordinate] = 0;
 	}
 
 	public int retrievePuzzleIndexValue(int[][] puzzle, int xCoordinate, int yCoordinate) {
@@ -50,7 +50,7 @@ public class Helper {
 	}
 
 	public boolean isEmptyOrRemoved(int[][] puzzle, int xCoordinate, int yCoordinate) {
-		return puzzle[xCoordinate][yCoordinate] == 0 || puzzle[xCoordinate][yCoordinate] == -1;
+		return puzzle[xCoordinate][yCoordinate] == 0;
 	}
 
 	public boolean valueAlreadyExists(int[][] puzzle, int xCoordinate, int yCoordinate) {

@@ -116,11 +116,11 @@ public class Printer {
 	}
 
 	private String printEmptyIfEmptyOrInvalid(String puzzleValue) {
-		return puzzleValue.equals("-1") || puzzleValue.equals("0") ? " " : puzzleValue;
+		return puzzleValue.equals("0") ? " " : puzzleValue;
 	}
 
 	private String printNothingIfEmptyOrInvalid(String puzzleValue) {
-		return puzzleValue.equals("-1") || puzzleValue.equals("0") ? "nothing" : puzzleValue;
+		return puzzleValue.equals("0") ? "nothing" : puzzleValue;
 	}
 
 }
