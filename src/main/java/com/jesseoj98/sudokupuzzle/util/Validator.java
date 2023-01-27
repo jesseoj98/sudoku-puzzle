@@ -1,6 +1,7 @@
 package com.jesseoj98.sudokupuzzle.util;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import com.jesseoj98.sudokupuzzle.domain.Coordinate;
@@ -203,14 +204,16 @@ public class Validator {
 	 * @return whether there are multiple occurences of a value
 	 */
 	private boolean validate(List<Integer> values) {
-		for (int i = 0; i < values.size(); i++) {
-			for (int j = i + 1; j < values.size(); j++) {
-				if (values.get(i).equals(values.get(j))) {
-					return false;
-				}
+		if (values == null || values.isEmpty()) {
+			return false;
+		}
+		final HashSet<Integer> set = new HashSet<>();
+		for (int num : values) {
+			if (!set.add(num)) {
+				return true;
 			}
 		}
-		return true;
+		return false;
 	}
 
 	/**
